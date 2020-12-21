@@ -53,7 +53,7 @@ module.exports = (dato, root, i18n) => {
       };
     }),
     faviconMetaTags: toHtml(dato.site.faviconMetaTags),
-    seoMetaTags: toHtml(dato.home.seoMetaTags.concat(`<title>${dato.home}</title>`))
+    seoMetaTags: toHtml(dato.home.seoMetaTags)
   });
 
   // Create a markdown file with content coming from the `about_page` item
