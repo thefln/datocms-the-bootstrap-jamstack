@@ -10,7 +10,7 @@ const htmlTag = require('html-tag');
 
 const toHtml = (tags) => (
   tags.map(({ tagName, attributes, content }) => (
-    htmlTag(tagName, attributes, content)
+    htmlTag(tagName, attributes == null ? {} : attributes, content)
   )).join("")
 );
 
@@ -63,9 +63,7 @@ module.exports = (dato, root, i18n) => {
       title: dato.aboutPage.title,
       subtitle: dato.aboutPage.subtitle,
       photo: dato.aboutPage.photo.url({ w: 800, fm: 'jpg', auto: 'compress' }),
-      seoMetaTags: `<title>
-          ${dato.aboutPage.seoMetaTags.filter(({ tagName, attributes, content }) => tagName == 'title')[0].content}
-        </title>` + toHtml(dato.aboutPage.seoMetaTags),
+      seoMetaTags: toHtml(dato.aboutPage.seoMetaTags),
       menu: { main: { weight: 100 } }
     },
     content: dato.aboutPage.bio
