@@ -63,7 +63,9 @@ module.exports = (dato, root, i18n) => {
       title: dato.aboutPage.title,
       subtitle: dato.aboutPage.subtitle,
       photo: dato.aboutPage.photo.url({ w: 800, fm: 'jpg', auto: 'compress' }),
-      seoMetaTags: `<title>${JSON.stringify(dato.aboutPage.seoMetaTags)}</title>` + toHtml(dato.aboutPage.seoMetaTags),
+      seoMetaTags: `<title>
+          ${tags.filter(({ tagName, attributes, content }) => tagName == 'title')[0].content}
+        </title>` + toHtml(dato.aboutPage.seoMetaTags),
       menu: { main: { weight: 100 } }
     },
     content: dato.aboutPage.bio
