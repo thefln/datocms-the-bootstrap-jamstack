@@ -1,4 +1,4 @@
-## The Bootstrap Jamstack (Website) [WIP]
+## The Bootstrap Jamstack (Website) [WIP] [![Netlify Status](https://api.netlify.com/api/v1/badges/b4d4851c-b743-4034-8f20-293d2ca9396e/deploy-status)](https://app.netlify.com/sites/bootstrapjamstack/deploys)
 
 ![The Bootstrap Jamstack](https://snipcart.com/media/205586/the-bootstrap-jamstack.png?width=1600&format=webp&quality=80&upscale=false)
 
